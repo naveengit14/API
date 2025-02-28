@@ -44,7 +44,7 @@ public class JIRA {
                     "        \"project\": {\n" +
                     "            \"key\": \"SCRUM\"\n" +
                     "        },\n" +
-                    "        \"summary\": \"Created issue from RestAssured.\",\n" +
+                    "        \"summary\": \"28 Feb Created issue from RestAssured.\",\n" +
                     "        \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n" +
                     "        \"issuetype\": {\n" +
                     "            \"name\": \"Bug\"\n" +
@@ -70,12 +70,12 @@ System.out.println("New issue created in JIRA using RestAssured with "+IssueID);
     RestAssured.baseURI="https://qanaveensingh.atlassian.net/";
     String createResponse= given()
             .header("Content-Type","application/json")
-            .header("Authorization","Basic bmF2ZWVuc2luZ2guMDBAZ21haWwuY29tOkFUQVRUM3hGZkdGMEFtTVRpQS1UenhLTlE2eTRwc2t5bzVtZVY3c2hVbW4wYVoyRVpzUHEyVTdFejdfdHc4dGhpQzc1M1lUUXFGME1Ta1FqMVF4RHU4akVWSFZiQ2p6SnIxcGZISnJ1Rlg4aXhpQ3BhMmlXVFB6TmFDdmg5OFNKempIRjY2MTZHN01QLUpvczBGRFRrRGl5UGdmU21iSEhqYVFNMHpCby1ZQWtoVjYwdEw2X0xjbz03QzRDNUFFRA")
+            .header("Authorization","Basic bmF2ZWVuc2luZ2guMDBAZ21haWwuY29tOkFUQVRUM3hGZkdGMEZicF9aZ1NuMVJuYjFYbll3eWdtd2Vvd250YjdIZG9BV0V1aUhVVXZReXFxLTZNMm9KUWQyMFRLRWZ4SUg3NC1jOXF4a2RGSUYyOXB0emtvN2cxQ0N1SVJ4TGp4bDNmNjZwOVQyYTUyQ3BTcUNod2JjeUpRQVB3ZF9tbmpYekgtaUlheWRVdjBGN1dNWTNDYXJxQ2tnX3VxYUZNZU5RS0VQZ1BVSzUwQW5MWT1GNjEzRjBBNg")
             .body("{ \"fields\": {\n" +
                     "        \"project\": {\n" +
                     "            \"key\": \"SCRUM\"\n" +
                     "        },\n" +
-                    "        \"summary\": \"window link not working:RestAssured.\",\n" +
+                    "        \"summary\": \" 28 Feb window link not working:RestAssured.\",\n" +
                     "        \"description\": \"Create new issue and attachment in issue \",\n" +
                     "        \"issuetype\": {\n" +
                     "            \"name\": \"Bug\"\n" +
@@ -101,7 +101,7 @@ System.out.println("New issue created in JIRA using RestAssured with "+IssueID);
    String responseAttachment= given()
            // .header("Content-Type","multipart/form-data")
             .pathParam("key",issueID)
-            .header("Authorization","Basic bmF2ZWVuc2luZ2guMDBAZ21haWwuY29tOkFUQVRUM3hGZkdGMEFtTVRpQS1UenhLTlE2eTRwc2t5bzVtZVY3c2hVbW4wYVoyRVpzUHEyVTdFejdfdHc4dGhpQzc1M1lUUXFGME1Ta1FqMVF4RHU4akVWSFZiQ2p6SnIxcGZISnJ1Rlg4aXhpQ3BhMmlXVFB6TmFDdmg5OFNKempIRjY2MTZHN01QLUpvczBGRFRrRGl5UGdmU21iSEhqYVFNMHpCby1ZQWtoVjYwdEw2X0xjbz03QzRDNUFFRA")
+            .header("Authorization","Basic bmF2ZWVuc2luZ2guMDBAZ21haWwuY29tOkFUQVRUM3hGZkdGMEZicF9aZ1NuMVJuYjFYbll3eWdtd2Vvd250YjdIZG9BV0V1aUhVVXZReXFxLTZNMm9KUWQyMFRLRWZ4SUg3NC1jOXF4a2RGSUYyOXB0emtvN2cxQ0N1SVJ4TGp4bDNmNjZwOVQyYTUyQ3BTcUNod2JjeUpRQVB3ZF9tbmpYekgtaUlheWRVdjBGN1dNWTNDYXJxQ2tnX3VxYUZNZU5RS0VQZ1BVSzUwQW5MWT1GNjEzRjBBNg")
             .header("X-Atlassian-Token","no-check")
             .multiPart("file",new File("\\C:\\Users\\qanav\\Pictures\\Shiva.jpg"))
            .log().all()
