@@ -33,7 +33,7 @@ public class Serialization {
         gp.setLocation(location);
 
         RestAssured.baseURI="https://rahulshettyacademy.com";
-      Response addPlaceResponse= (Response) given().log().all().queryParam("key","qaclick123")
+        Response addPlaceResponse= (Response) given().log().all().queryParam("key","qaclick123")
                 .body(gp).when().post("maps/api/place/add/json")
                 .then().log().all().assertThat().statusCode(200).extract();
                 String response=addPlaceResponse.toString();
